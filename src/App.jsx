@@ -209,6 +209,12 @@ const App = () => {
           className="w-full max-w-6xl flex flex-col sm:flex-row justify-between items-center mb-8 gap-4"
         >
           <div className="flex items-center gap-4">
+            <img src="/taskflow-icon.svg" alt="icon" width={100} />
+            <h1 className={`text-4xl sm:text-5xl font-bold ${currentTheme.text}`}>
+              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                TaskFlow Pro
+              </span>
+            </h1>
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -216,11 +222,6 @@ const App = () => {
             >
               ✨
             </motion.div>
-            <h1 className={`text-4xl sm:text-5xl font-bold ${currentTheme.text}`}>
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                TaskFlow Pro
-              </span>
-            </h1>
           </div>
 
           <div className="flex items-center gap-3">
