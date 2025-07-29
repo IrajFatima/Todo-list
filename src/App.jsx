@@ -4,6 +4,8 @@ import {
   Trash2, Plus, Moon, Sun, Check, Filter, Star, Calendar, Clock,
   Edit2, Save, X, Search, SortAsc, BarChart3, Target, Zap
 } from "lucide-react";
+import taskflowIcon from "./assets/taskflow-icon.svg";
+
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -209,7 +211,7 @@ const App = () => {
           className="w-full max-w-6xl flex flex-col sm:flex-row justify-between items-center mb-8 gap-4"
         >
           <div className="flex items-center gap-4">
-            <img src="/taskflow-icon.svg" alt="icon" width={100} />
+            <img src={taskflowIcon} alt="icon" width={100} />
             <h1 className={`text-4xl sm:text-5xl font-bold ${currentTheme.text}`}>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 TaskFlow Pro
