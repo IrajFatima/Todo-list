@@ -309,40 +309,6 @@ const App = () => {
           </div>
         </motion.div>
 
-        {/* Search and Sort Controls */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.15 }}
-          className={`w-full max-w-6xl p-4 rounded-2xl ${currentTheme.card} mb-6 backdrop-blur-sm border`}
-        >
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-              <input
-                type="text"
-                placeholder="Search tasks..."
-                className={`w-full pl-12 pr-4 py-3 rounded-xl ${currentTheme.input} border-2 outline-none transition-all duration-300 focus:border-blue-500`}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-
-            <div className="flex items-center gap-2">
-              <SortAsc className="text-gray-400" size={20} />
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className={`px-4 py-3 rounded-xl ${currentTheme.input} border-2 outline-none transition-all duration-300 focus:border-blue-500`}
-              >
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="priority">Priority</option>
-              </select>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Add Task Form */}
         <motion.form
           initial={{ y: 50, opacity: 0 }}
@@ -398,6 +364,41 @@ const App = () => {
             </div>
           </div>
         </motion.form>
+
+
+        {/* Search and Sort Controls */}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.15 }}
+          className={`w-full max-w-6xl p-4 rounded-2xl ${currentTheme.card} mb-6 backdrop-blur-sm border`}
+        >
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <input
+                type="text"
+                placeholder="Search tasks..."
+                className={`w-full pl-12 pr-4 py-3 rounded-xl ${currentTheme.input} border-2 outline-none transition-all duration-300 focus:border-blue-500`}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <SortAsc className="text-gray-400" size={20} />
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className={`px-4 py-3 rounded-xl ${currentTheme.input} border-2 outline-none transition-all duration-300 focus:border-blue-500`}
+              >
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="priority">Priority</option>
+              </select>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Filter Buttons */}
         <motion.div
